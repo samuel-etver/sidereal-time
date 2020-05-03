@@ -1,0 +1,30 @@
+body {
+    margin-left: 32px;
+    margin-top: 16px;
+}
+.basic {
+    display: grid;
+    grid-template-columns: 100px 200px 200px;
+    margin-bottom: 8px;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+
+.basic .result {
+    grid-column-start: span 2;
+    font-weight: bold;
+}
+
+.basic .result-caption {
+    font-weight: bold;
+}
+
+.basic .divider {
+    height: 8px;
+    grid-column-start: span 3;
+}
+
+.longitude {
+    display: inline-block;
+    width: 35px;
+}

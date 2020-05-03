@@ -1,0 +1,80 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>  
+<body>
+    <header>
+        <h1 id='main-title'>Local Sidereal Time (LST)</h1>
+
+    </header>
+
+    <main>
+        <div class="basic">
+            <div id="hour-label">Hour:</div>
+            <input id="hour-edit" type="text">
+            <button id="system-time-button" onclick="onTakeSystemTime()">Take System Time</button>
+
+            <div id="minute-label">Minute:</div>
+            <input id="minute-edit" type="text">
+            <div></div>
+
+            <div id="second-label">Second:</div>
+            <input id="second-edit" type="text">
+            <div></div>
+
+            <div id="day-label">Day:</div>
+            <input id="day-edit" type="text">
+            <div></div>
+
+            <div id="month-label">Month:</div>
+            <input id="month-edit" type="text">
+            <div></div>
+
+            <div id="year-label" class="cell">Year:</div>
+            <input id="year-edit" type="text">
+            <div></div>
+
+            <div class="divider"></div>
+
+            <div id="timezone-label">Time Zone:</div>
+            <input id="timezone-edit" type="text">
+            <button id="timezone-button" onclick="onTakeTimeZone()">Take Time Zone</button>
+
+            <div class="divider"></div>
+
+            <div id="longitude-label">Longitude:</div>
+            <div>
+                <input id="longitude-degree-edit" type="text" value="0" class="longitude">
+                &#176
+                <input id="longitude-minute-edit" type="text" value="0" class="longitude">
+                '
+                <input id="longitude-second-edit" type="text" value="0" class="longitude">
+                "
+                <select id="longitude-select" class="longitude">
+                    <option id="longitude-option-E">E</option>
+                    <option id="longitude-option-W">W</option>
+                </select>
+            </div>
+            <button id="longitude-button" onclick="onTakeLongitude()">Take Longitude</button>
+
+            <div class="divider"></div>
+
+            <div class="result-caption">LMST:</div>
+            <div id="local-mean-sidereal-time-label" class="result"></div>
+
+            <div class="result-caption">LAST:</div>
+            <div id="local-apparent-sidereal-time-label" class="result"></div>
+
+            <div class="divider"></div>
+        </div>
+
+        <button id="calculate-button" onclick="updateLST()">Calculate</button>
+
+    </main>
+
+    <script src="index.js"></script>
+    <script src="sidereal.js"></script>
+    <script src="translate.js"></script>
+
+</body>
+</html>
